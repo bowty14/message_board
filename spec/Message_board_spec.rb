@@ -39,5 +39,15 @@ end
     end
   end
 
+  describe('.find') do
+    it("finds a board") do
+      board = Board.new({:name => "dogs", :id => nil})
+      board.save()
+      board2 = Board.new({:name => "cats", :id => nil})
+      board2.save()
+      expect(Board.find(board.id)).to(eq(board))
+    end
+  end
+
 
 end

@@ -27,4 +27,13 @@ class Board
     @@total_rows = 0
   end
 
+  # def update(name)
+  #   # self.name = name
+  #   # @@boards[self.id] = Board.new({:name => self.name, :id => self.id})
+  # end
+
+  def self.find(id)
+    @@boards[id]
+  end  
+
 end
