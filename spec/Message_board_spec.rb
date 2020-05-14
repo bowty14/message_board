@@ -27,7 +27,7 @@ end
       board2 = Board.new({:name => "cats", :id => nil})
       board2.save()
       Board.clear()
-      expect(Board.all).to(eq(""))
+      expect(Board.all).to(eq([]))
     end
   end    
 
