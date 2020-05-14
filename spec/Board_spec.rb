@@ -1,4 +1,4 @@
-require ('Message_board')
+require ('Board')
 require ('pry')
 require ('rspec')
 
