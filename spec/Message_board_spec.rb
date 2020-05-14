@@ -49,5 +49,13 @@ end
     end
   end
 
+  describe('.search') do
+    it('Will allow you to search for a board') do
+      board1 = Board.new({:name => "dogs", :id => nil})
+      board1.save()
+      board2 = Board.new({:name => "cats", :id => nil})
+      board2.save()
+      expect(Board.search(board1.name)).to(eq([board1]))
+
 
 end
