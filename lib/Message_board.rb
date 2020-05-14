@@ -18,4 +18,8 @@ class Board
   def save
     @@boards[self.id] = Board.new(self.name, self.id)
   end
+
+  def ==(board_to_compare)
+    self.name() ==  board_to_compare.name()
+  end  
 end
