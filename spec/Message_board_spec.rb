@@ -2,10 +2,13 @@ require ('Message_board')
 require ('pry')
 require ('rspec')
 
-describe('#Board')
+describe('#Board') do
 
-  # before(:each) do
-  #   board.clear()
+describe('.all') do
+  it('returns an empty array when there are no boards') do
+    expect(Board.all).to(eq([]))
+  end
+end
 
   describe('#save') do
     it('Will save a new board that is created') do
@@ -17,9 +20,5 @@ describe('#Board')
     end
   end
 
-  describe('.all') do
-    it('returns an empty array when there are no boards') do
-      expect(Board.all).to(eq([]))
-    end
-  end
+
 end
