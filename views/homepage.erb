@@ -1,0 +1,24 @@
+<%# Bord info, main redirect %>
+<h1>Message Boards</h1>
+
+<h3>Check out the available message boards</h3>
+
+<% if @boards.any? %>
+  <ul>
+    <% @boards.each do |board| %>
+      <li><a href="/boards/<%= board.id %>"><%= board.name %></a></li>
+      <% end %>
+  </ul>
+<% else %>
+  <p> There are no message boards yet!</p>
+<% end %>
+
+<a href="/homepage/new">Add a new message board</a>
+
+<form action="/boards">
+  <div class="form-group">
+    <label for="search">Search</label>
+    <input id="search" name="search" class="form-control" type="text" placeholder="Enter Here">
+  </div>
+  <button type="submit" class="btn btn-success">Submit</button>
+</form>
