@@ -20,5 +20,16 @@ end
     end
   end
 
+  describe('.clear') do
+    it("clears all boards") do
+      board = Board.new({:name => "dogs", :id => nil})
+      board.save()
+      board2 = Board.new({:name => "cats", :id => nil})
+      board2.save()
+      Board.clear()
+      expect(Board.all).to(eq(""))
+    end
+  end    
+
 
 end

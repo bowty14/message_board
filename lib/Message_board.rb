@@ -22,4 +22,9 @@ class Board
     self.name() ==  board_to_compare.name()
   end
 
+  def self.clear
+    @@boards = {}
+    @@total_rows = 0
+  end
+
 end
