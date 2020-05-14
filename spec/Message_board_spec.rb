@@ -37,7 +37,7 @@ end
       board2 = Board.new({:name => "dogs", :id => nil})
       expect(board1).to(eq(board2))
     end
-  
+  end
 
 
 end
