@@ -36,6 +36,9 @@ class Board
     @@boards[id]
   end  
 
-  
+  def self.search(name)
+    array = @@boards.values.select {|board| board.name == name}
+    return array
+  end
 
 end

@@ -4,6 +4,10 @@ require ('rspec')
 
 describe('#Board') do
 
+before(:each) do
+  Board.clear()
+end
+
 describe('.all') do
   it('returns an empty array when there are no boards') do
     expect(Board.all).to(eq([]))
@@ -51,11 +55,14 @@ end
 
   describe('.search') do
     it('Will allow you to search for a board') do
-      board1 = Board.new({:name => "dogs", :id => nil})
+      board = Board.new({:name => "dogs", :id => nil})
+      board.save()
+      board1 = Board.new({:name => "cats", :id => nil})
       board1.save()
-      board2 = Board.new({:name => "cats", :id => nil})
-      board2.save()
-      expect(Board.search(board1.name)).to(eq([board1]))
+      
+      expect(Board.search(board.name)).to(eq([board]))
+    end
+  end
 
 
 end
