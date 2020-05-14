@@ -31,5 +31,13 @@ end
     end
   end    
 
+  describe('#==') do
+    it("is the same board if it has the same attributes as another board") do
+      board1 = Board.new({:name => "dogs", :id => nil})
+      board2 = Board.new({:name => "dogs", :id => nil})
+      expect(board1).to(eq(board2))
+    end
+  
+
 
 end
