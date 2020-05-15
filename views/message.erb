@@ -1,0 +1,19 @@
+<h2>Message: <%= @message.text %></h2>
+<h3>Board: <%= @message.board.name %></h3>
+
+<form action="/homepage/<%= @message.board.id %>/message/<%= @message.id %>" method="post">
+  <input name="_method" type="hidden" value="patch">
+
+  <label for="name">Rename song</label>
+  <input id="name" name="name" type="text">
+
+  <button type="submit">Rename song</button>
+</form>
+
+<form action="/homepage/<%= @message.board.id %>/message/<%=@message.id %>" method="post">
+  <input name="_method" type="hidden" value="delete">
+
+  <button type="submit">Delete song</button>
+</form>
+
+<a href="/homepage/<%= @message.board.id %>">Back to <%= @message.board.name%></a>

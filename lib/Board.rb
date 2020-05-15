@@ -41,4 +41,7 @@ class Board
     return array
   end
 
+  def message
+    Message.find_by_board({:id => self.id})
+  end  
 end

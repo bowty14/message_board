@@ -6,7 +6,7 @@
 <% if @boards.any? %>
   <ul>
     <% @boards.each do |board| %>
-      <li><a href="/boards/<%= board.id %>"><%= board.name %></a></li>
+      <li><a href="/homepage/<%= board.id %>"><%= board.name %></a></li>
       <% end %>
   </ul>
 <% else %>
@@ -15,7 +15,7 @@
 
 <a href="/homepage/new">Add a new message board</a>
 
-<form action="/boards">
+<form action="/homepage">
   <div class="form-group">
     <label for="search">Search</label>
     <input id="search" name="search" class="form-control" type="text" placeholder="Enter Here">
